@@ -6,7 +6,7 @@ sealed class StepperState extends Equatable {
   const StepperState(this.currentStep);
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [currentStep];
 }
 
 final class StepperInitial extends StepperState {

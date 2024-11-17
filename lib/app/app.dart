@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wink_chat/screen/introduction_screen.dart';
+import 'package:wink_chat/screens/introduction_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
