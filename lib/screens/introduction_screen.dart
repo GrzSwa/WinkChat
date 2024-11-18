@@ -13,51 +13,45 @@ class IntroductionScreen extends StatelessWidget {
     final PageController _controller = PageController();
     return BlocProvider(
       create: (_) => StepperCubit(),
-      child: Scaffold(
-          appBar: AppBar(title: const Center(child: AppLogo())),
-          body: BlocConsumer<StepperCubit, StepperState>(
-            listener: (context, state) {
-              _controller.jumpToPage(state.currentStep);
-            },
-            builder: (context, state) {
-              final stepperCubit = context.read<StepperCubit>();
-              return Stack(
-                children: [
-                  PageView(
-                    controller: _controller,
-                    physics: const NeverScrollableScrollPhysics(),
-                    children: [
-                      GetStartedView(
-                        onPressed: () => stepperCubit.next(),
-                      ),
-                      RegulationAndPrivacyPolicyView(
-                        actions: {
-                          "accept": () => {stepperCubit.next()},
-                          "decline": () => {stepperCubit.cancel()}
-                        },
-                      ),
-                      Container(
-                        color: Colors.greenAccent,
-                      ),
-                      Container(
-                        color: Colors.redAccent,
-                      ),
-                    ],
-                  ),
-                  state.currentStep > 0
-                      ? Container(
-                          alignment: Alignment.bottomCenter,
-                          padding: EdgeInsets.only(bottom: 20),
-                          child: AnimatedSmoothIndicator(
-                            activeIndex: state.currentStep - 1,
-                            count: 3,
-                          ),
+      child:
+          BlocConsumer<StepperCubit, StepperState>(listener: (context, state) {
+        _controller.jumpToPage(state.currentStep);
+      }, builder: (context, state) {
+        final stepperCubit = context.read<StepperCubit>();
+        return Scaffold(
+            appBar: AppBar(title: const Center(child: AppLogo())),
+            bottomNavigationBar: SizedBox(
+              height: 50,
+              child: Center(
+                  child: state.currentStep > 0
+                      ? AnimatedSmoothIndicator(
+                          activeIndex: state.currentStep - 1,
+                          count: 3,
                         )
-                      : Container()
-                ],
-              );
-            },
-          )),
+                      : Container()),
+            ),
+            body: PageView(
+              controller: _controller,
+              physics: const NeverScrollableScrollPhysics(),
+              children: [
+                GetStartedView(
+                  onPressed: () => stepperCubit.next(),
+                ),
+                RegulationAndPrivacyPolicyView(
+                  actions: {
+                    "accept": () => {stepperCubit.next()},
+                    "decline": () => {stepperCubit.cancel()}
+                  },
+                ),
+                Container(
+                  color: Colors.greenAccent,
+                ),
+                Container(
+                  color: Colors.redAccent,
+                ),
+              ],
+            ));
+      }),
     );
   }
 }
