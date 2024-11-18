@@ -27,6 +27,10 @@ class IntroductionScreen extends StatelessWidget {
                       ? AnimatedSmoothIndicator(
                           activeIndex: state.currentStep - 1,
                           count: 3,
+                          effect: const SwapEffect(
+                              dotColor: Colors.grey,
+                              activeDotColor:
+                                  Color.fromARGB(255, 255, 103, 103)),
                         )
                       : Container()),
             ),

@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wink_chat/features/regulations_and_privacy_policy/data/provider/regulations_and_privacy_policy_provider.dart';
 import 'package:wink_chat/features/regulations_and_privacy_policy/data/repository/regulations_and_privacy_policy_repository.dart';
 import 'package:wink_chat/features/regulations_and_privacy_policy/domain/cubit/regulations_and_privacy_policy_cubit.dart';
+import 'package:wink_chat/shared/widgets/buttons/primary_button.dart';
+import 'package:wink_chat/shared/widgets/buttons/secondary_button.dart';
 
 class RegulationAndPrivacyPolicyView extends StatelessWidget {
   final Map<String, VoidCallback>? actions;
@@ -13,7 +15,7 @@ class RegulationAndPrivacyPolicyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 20, bottom: 60),
+      padding: const EdgeInsets.only(top: 20, bottom: 30),
       child: Column(
         children: [
           const Text(
@@ -34,9 +36,9 @@ class RegulationAndPrivacyPolicyView extends StatelessWidget {
                       RegulationsAndPrivacyPolicyState>(
                     builder: (context, state) {
                       if (state is RegulationsAndPrivacyPolicyLoading) {
-                        return CircularProgressIndicator();
+                        return const CircularProgressIndicator();
                       } else if (state is RegulationsAndPrivacyPolicyError) {
-                        return Text("Wystąpił błąd");
+                        return const Text("Wystąpił błąd");
                       } else if (state is RegulationsAndPrivacyPolicyLoaded) {
                         return ListView.builder(
                           itemCount: state.data.length,
@@ -44,7 +46,7 @@ class RegulationAndPrivacyPolicyView extends StatelessWidget {
                             return ListTile(
                               title: Text(
                                 state.data[index].title,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontWeight: FontWeight.w500,
                                     color: Colors.redAccent),
                               ),
@@ -53,7 +55,7 @@ class RegulationAndPrivacyPolicyView extends StatelessWidget {
                           },
                         );
                       } else {
-                        return Center(
+                        return const Center(
                           child: Text("Brak danych"),
                         );
                       }
@@ -65,10 +67,9 @@ class RegulationAndPrivacyPolicyView extends StatelessWidget {
           ),
           Column(
             children: [
-              ElevatedButton(
-                  onPressed: actions?["accept"], child: Text("Akceptuje")),
-              ElevatedButton(
-                  onPressed: actions?["decline"], child: Text("Anuluj")),
+              PrimaryButton(onPressed: actions?["accept"], label: "Akceptuje"),
+              const SizedBox(height: 10),
+              SecondaryButton(onPressed: actions?["decline"], label: "Anuluj"),
             ],
           )
         ],

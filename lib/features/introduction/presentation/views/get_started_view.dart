@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wink_chat/features/introduction/presentation/widgets/avatars_grid_list.dart';
 import 'package:wink_chat/features/introduction/presentation/widgets/info_box.dart';
+import 'package:wink_chat/shared/widgets/buttons/primary_button.dart';
 
 class GetStartedView extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -42,7 +43,7 @@ class GetStartedView extends StatelessWidget {
                   describe: describe,
                 ),
               )),
-          ElevatedButton(onPressed: onPressed, child: Text("Zaczynajmy!"))
+          PrimaryButton(onPressed: onPressed, label: "Zaczynajmy!")
         ],
       ),
     );
