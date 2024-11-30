@@ -5,15 +5,15 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:equatable/equatable.dart';
 import 'package:wink_chat/shared/enums/enums.dart';
 
-part 'check_internet_connection_state.dart';
+part 'check_connection_state.dart';
 
-class CheckInternetConnectionCubit extends Cubit<CheckInternetConnectionState> {
+class CheckConnectionCubit extends Cubit<CheckConnectionState> {
   final Connectivity _connectivity;
   late StreamSubscription<List<ConnectivityResult>>
       _connectivityStreamSubscription;
 
-  CheckInternetConnectionCubit(this._connectivity)
-      : super(const CheckInternetConnectionInitial()) {
+  CheckConnectionCubit(this._connectivity)
+      : super(const CheckConnectionInitial()) {
     _monitorInternetConnection();
   }
 
@@ -22,9 +22,9 @@ class CheckInternetConnectionCubit extends Cubit<CheckInternetConnectionState> {
         _connectivity.onConnectivityChanged.listen((connectivityResult) {
       if (connectivityResult[0] == ConnectivityResult.wifi ||
           connectivityResult[0] == ConnectivityResult.mobile) {
-        emit(const CheckInternetConnectionConnected());
+        emit(const CheckConnectionConnected());
       } else {
-        emit(const CheckInternetConnectionDisconnected());
+        emit(const CheckConnectionDisconnected());
       }
     });
   }

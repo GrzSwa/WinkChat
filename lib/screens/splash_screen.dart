@@ -1,8 +1,8 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wink_chat/features/check_internet_connection/domain/cubit/check_internet_connection_cubit.dart';
-import 'package:wink_chat/features/check_internet_connection/presentation/views/views.dart';
+import 'package:wink_chat/features/check_connection/domain/cubit/cubit.dart';
+import 'package:wink_chat/features/check_connection/presentation/views/views.dart';
 import 'package:wink_chat/shared/widgets/widgets.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -12,8 +12,8 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
-    return BlocProvider<CheckInternetConnectionCubit>(
-      create: (context) => CheckInternetConnectionCubit(Connectivity()),
+    return BlocProvider<CheckConnectionCubit>(
+      create: (context) => CheckConnectionCubit(Connectivity()),
       child: Scaffold(
         body: Container(
             width: _width,

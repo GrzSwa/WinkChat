@@ -18,7 +18,6 @@ class SecondaryButtonWidget extends StatelessWidget {
         ),
         textStyle: WidgetStateProperty.all(
           const TextStyle(
-            color: Colors.black,
             fontWeight: FontWeight.w600,
             fontSize: 18,
             letterSpacing: 1,
