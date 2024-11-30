@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wink_chat/config/routes/routes_config.dart';
+import 'package:wink_chat/config/routes/routes.dart';
 import 'package:wink_chat/features/check_internet_connection/presentation/widgets/widgets.dart';
 import 'package:wink_chat/shared/widgets/widgets.dart';
 
