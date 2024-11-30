@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wink_chat/config/routes/routes.dart';
 import 'package:wink_chat/features/check_connection/presentation/widgets/widgets.dart';
-import 'package:wink_chat/shared/widgets/widgets.dart';
 
 import '../../domain/cubit/cubit.dart';
 
@@ -11,18 +10,24 @@ class ConnectionStatusView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<CheckConnectionCubit, CheckConnectionState>(
-      builder: (context, state) {
-        if (state is CheckConnectionInitial) {
-          return const SpinnerWidget();
-        } else if (state is CheckConnectionConnected) {
-          return SecondaryButtonWidget(
-            text: "Rozpocznij",
-            onPressed: () => Navigator.pushReplacementNamed(
+    bool flag = true;
+    return BlocConsumer<CheckConnectionCubit, CheckConnectionState>(
+      listener: (context, state) {
+        if (state is CheckConnectionConnected && flag) {
+          Future.delayed(
+            const Duration(seconds: 3),
+            () => Navigator.pushReplacementNamed(
               context,
               RoutesConfig.introductionScreen,
             ),
           );
+        }
+      },
+      builder: (context, state) {
+        if (state is CheckConnectionInitial) {
+          return const SpinnerWidget();
+        } else if (state is CheckConnectionConnected) {
+          return const SizedBox();
         } else if (state is CheckConnectionDisconnected) {
           return const Text(
             "Brak połączenia",
