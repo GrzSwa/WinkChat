@@ -10,22 +10,26 @@ class IntroductionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+        color: const Color(0xff161616),
         child: MultiBlocProvider(
             providers: [
-          BlocProvider<StepperCubit>(
-            create: (context) => StepperCubit(CarouselSliderController()),
-          ),
-          BlocProvider<RAPPCubit>(
-            create: (context) => RAPPCubit(
-              RegulationsAndPrivacyPolicyRepository(
-                  GetRegulationsAndPrivacyPolicy()),
-            ),
-          )
-        ],
-            child: const IntroductionStepperView(children: [
-              RegulationsAndPrivacyPolicyView(),
-              Center(child: Text("next1")),
-              Center(child: Text("next2")),
-            ])));
+              BlocProvider<StepperCubit>(
+                create: (context) => StepperCubit(CarouselSliderController()),
+              ),
+              BlocProvider<RAPPCubit>(
+                create: (context) => RAPPCubit(
+                  RegulationsAndPrivacyPolicyRepository(
+                      GetRegulationsAndPrivacyPolicy()),
+                ),
+              ),
+            ],
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: IntroductionStepperView(children: [
+                AppInfoView(),
+                RegulationsAndPrivacyPolicyView(),
+                UsernameView()
+              ]),
+            )));
   }
 }
