@@ -1,14 +1,20 @@
 part of 'stepper_cubit.dart';
 
 sealed class StepperState extends Equatable {
-  final CarouselSliderController stepperController;
-  const StepperState(this.stepperController);
+  const StepperState();
 
   @override
-  List<Object> get props => [stepperController];
+  List<Object> get props => [];
 }
 
 final class StepperInitial extends StepperState {
-  const StepperInitial(CarouselSliderController stepperController)
-      : super(stepperController);
+  const StepperInitial() : super();
+}
+
+final class StepperUpdated extends StepperState {
+  final int step;
+  const StepperUpdated(this.step) : super();
+
+  @override
+  List<Object> get props => [step];
 }

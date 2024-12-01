@@ -6,23 +6,24 @@ import 'package:flutter/services.dart';
 part 'stepper_state.dart';
 
 class StepperCubit extends Cubit<StepperState> {
-  final CarouselSliderController _stepperController;
-  int step = 0;
+  CarouselSliderController stepperController;
+  int _step = 0;
 
-  StepperCubit(this._stepperController)
-      : super(StepperInitial(_stepperController));
+  StepperCubit(this.stepperController) : super(StepperInitial());
 
   void next() {
-    _stepperController.nextPage();
-    step++;
+    stepperController.nextPage();
+    _step++;
+    emit(StepperUpdated(_step));
   }
 
   void cancel() {
-    if (step > 0) {
-      _stepperController.previousPage();
-      step--;
+    if (_step > 0) {
+      stepperController.previousPage();
+      _step--;
     } else {
       SystemNavigator.pop();
     }
+    emit(StepperUpdated(_step));
   }
 }
