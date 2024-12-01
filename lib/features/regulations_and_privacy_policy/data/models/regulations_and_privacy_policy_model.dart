@@ -1,14 +1,14 @@
 import 'package:equatable/equatable.dart';
 
 class RegulationsAndPrivacyPolicyModel extends Equatable {
-  final String htmlBody;
+  final String body;
 
-  const RegulationsAndPrivacyPolicyModel({required this.htmlBody});
+  const RegulationsAndPrivacyPolicyModel({required this.body});
 
-  factory RegulationsAndPrivacyPolicyModel.fromHtml(String html) {
-    return RegulationsAndPrivacyPolicyModel(htmlBody: html);
+  factory RegulationsAndPrivacyPolicyModel.fromHtml(String htmlCode) {
+    return RegulationsAndPrivacyPolicyModel(body: htmlCode);
   }
 
   @override
-  List<Object?> get props => [htmlBody];
+  List<Object?> get props => [body];
 }

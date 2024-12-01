@@ -14,12 +14,12 @@ class PrimaryButtonWidget extends StatelessWidget {
         backgroundColor: WidgetStateProperty.all(Color(0xffde676c)),
         foregroundColor: WidgetStateProperty.all(Colors.white),
         padding: WidgetStateProperty.all(
-          const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+          const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
         ),
         textStyle: WidgetStateProperty.all(
           const TextStyle(
             fontWeight: FontWeight.w600,
-            fontSize: 18,
+            fontSize: 14,
             letterSpacing: 1,
           ),
         ),

@@ -10,7 +10,7 @@ class RegulationsAndPrivacyPolicyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.blueAccent,
+        color: Color(0xff161616),
         child: SafeArea(
           child: SingleChildScrollView(
             child: BlocBuilder<RAPPCubit, RAPPState>(
@@ -18,7 +18,7 @@ class RegulationsAndPrivacyPolicyView extends StatelessWidget {
                 if (state is RAPPLoading) {
                   return const Center(child: CircularProgressIndicator());
                 } else if (state is RAPPLoaded) {
-                  return Html(data: state.body.htmlBody);
+                  return Html(data: state.html.body);
                 } else {
                   return const Center(child: Text("Brak danych"));
                 }

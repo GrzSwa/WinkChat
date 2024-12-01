@@ -12,7 +12,6 @@ class RegulationsAndPrivacyPolicyRepository {
         .fetchRegulationsAndPrivacyPolicy();
 
     if (data.isNotEmpty) {
-      print(data);
       return RegulationsAndPrivacyPolicyModel.fromHtml(data);
     } else {
       throw Exception('Failed to load regulations and privacy policy');

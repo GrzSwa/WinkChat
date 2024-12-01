@@ -10,12 +10,12 @@ sealed class RAPPState extends Equatable {
 final class RAPPLoading extends RAPPState {}
 
 final class RAPPLoaded extends RAPPState {
-  final RegulationsAndPrivacyPolicyModel body;
+  final RegulationsAndPrivacyPolicyModel html;
 
-  RAPPLoaded(this.body);
+  RAPPLoaded(this.html);
 
   @override
-  List<Object> get props => [body];
+  List<Object> get props => [html];
 }
 
 final class RAPPError extends RAPPState {}

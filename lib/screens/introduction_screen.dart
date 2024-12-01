@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wink_chat/features/introduction_stepper/introduction_stepper.dart';
@@ -12,17 +13,19 @@ class IntroductionScreen extends StatelessWidget {
         child: MultiBlocProvider(
             providers: [
           BlocProvider<StepperCubit>(
-            create: (context) => StepperCubit(),
+            create: (context) => StepperCubit(CarouselSliderController()),
           ),
           BlocProvider<RAPPCubit>(
             create: (context) => RAPPCubit(
-                RegulationsAndPrivacyPolicyRepository(
-                    GetRegulationsAndPrivacyPolicy())),
-          ),
+              RegulationsAndPrivacyPolicyRepository(
+                  GetRegulationsAndPrivacyPolicy()),
+            ),
+          )
         ],
             child: const IntroductionStepperView(children: [
               RegulationsAndPrivacyPolicyView(),
-              Center(child: Text("dane2")),
+              Center(child: Text("next1")),
+              Center(child: Text("next2")),
             ])));
   }
 }
