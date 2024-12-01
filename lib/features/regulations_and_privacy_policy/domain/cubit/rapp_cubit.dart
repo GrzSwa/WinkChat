@@ -1,8 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:wink_chat/features/introduction_stepper/data/repository/regulations_and_privacy_policy_repository.dart';
-
 import '../../data/models/regulations_and_privacy_policy_model.dart';
+import '../../data/repository/regulations_and_privacy_policy_repository.dart';
 
 part 'rapp_state.dart';
 

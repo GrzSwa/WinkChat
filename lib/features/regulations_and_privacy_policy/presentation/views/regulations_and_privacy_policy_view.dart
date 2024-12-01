@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:wink_chat/features/introduction_stepper/introduction_stepper.dart';
+
+import '../../domain/cubit/rapp_cubit.dart';
 
 class RegulationsAndPrivacyPolicyView extends StatelessWidget {
   const RegulationsAndPrivacyPolicyView({Key? key}) : super(key: key);
