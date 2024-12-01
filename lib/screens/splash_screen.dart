@@ -1,8 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wink_chat/features/check_connection/domain/cubit/cubit.dart';
-import 'package:wink_chat/features/check_connection/presentation/views/views.dart';
+import 'package:wink_chat/features/check_connection/check_connection.dart';
 import 'package:wink_chat/shared/widgets/widgets.dart';
 
 class SplashScreen extends StatelessWidget {

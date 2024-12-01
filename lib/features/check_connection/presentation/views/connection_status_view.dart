@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wink_chat/config/routes/routes.dart';
-import 'package:wink_chat/features/check_connection/presentation/widgets/widgets.dart';
-
-import '../../domain/cubit/cubit.dart';
+import '../../domain/cubit/check_connection_cubit.dart';
+import '../widgets/spinner_widget.dart';
 
 class ConnectionStatusView extends StatelessWidget {
   const ConnectionStatusView({Key? key}) : super(key: key);
@@ -24,10 +23,9 @@ class ConnectionStatusView extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        if (state is CheckConnectionInitial) {
+        if (state is CheckConnectionInitial ||
+            state is CheckConnectionConnected) {
           return const SpinnerWidget();
-        } else if (state is CheckConnectionConnected) {
-          return const SizedBox();
         } else if (state is CheckConnectionDisconnected) {
           return const Text(
             "Brak połączenia",

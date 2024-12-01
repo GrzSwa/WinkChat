@@ -18,9 +18,6 @@ class RoutesConfig {
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case introductionScreen:
         return MaterialPageRoute(builder: (_) => const IntroductionScreen());
-      case regulationsAndPrivacyPolicyScreen:
-        return MaterialPageRoute(
-            builder: (_) => const RegulationsAndPrivacyPolicyScreen());
       case searchCallerScreen:
         return MaterialPageRoute(builder: (_) => const SearchCallerScreen());
       case chatScreen:
