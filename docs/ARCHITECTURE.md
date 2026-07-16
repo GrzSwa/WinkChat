@@ -111,3 +111,4 @@ ignorowane (forward compatibility).
 
 Każda istotna decyzja ma wpis w [docs/adr/](adr/). Dotychczas:
 - ADR-001: flutter_bloc jako zarządzanie stanem.
+- ADR-002: FVM do zarządzania wersją Fluttera.
