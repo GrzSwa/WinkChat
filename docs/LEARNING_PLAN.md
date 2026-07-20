@@ -33,17 +33,18 @@ Androida.
 Cel: swoboda w konstrukcjach, na których stoi cały projekt. Formuła: krótkie
 ćwiczenia w `dartpad` / katalogu scratch, nie w repo.
 
-- [ ] 1.1 🎓 Null safety na poważnie: `?`, `!`, `late`, `required`, promowanie
-      typów
-- [ ] 1.2 🎓 Klasy: konstruktory nazwane/fabryczne, `sealed`/`abstract`,
-      mixiny, `extension`
-- [ ] 1.3 🎓 **Asynchroniczność: `Future`, `async/await`, obsługa błędów** —
-      fundament
-- [ ] 1.4 🎓 **`Stream` i `StreamController`** — na tym stoi WebSocket i BLoC;
-      broadcast vs single-subscription, transformacje, subskrypcje i ich
-      sprzątanie
-- [ ] 1.5 🔨 Ćwiczenie zbiorcze: mini-symulator „serwera" na Streamach
-      (przygotowanie mentalne pod Fazę 5)
+- [x] 1.1 🎓 Null safety na poważnie: `?`, `!`, `late`, `required`, promowanie
+      typów → typ ma odzwierciedlać domenę (`String?` = wartość naprawdę bywa null)
+- [x] 1.2 🎓 Klasy: konstruktory nazwane/fabryczne, niemutowalność (`final`/
+      `const`), fabryka `fromMap`, `num.toInt()/toDouble()` przy JSON.
+      `sealed`/`abstract`, mixiny, `extension` — pełny drill w Fazie 5
+- [x] 1.3 🎓 **Asynchroniczność: `Future`, `async/await`, obsługa błędów** —
+      fundament (uwaga: żaden `return`/`throw` w `finally`)
+- [x] 1.4 🎓 **`Stream` i `StreamController`** — na tym stoi WebSocket i BLoC;
+      broadcast vs single-subscription, `listen` (onData/onError/onDone),
+      sprzątanie subskrypcji (`cancel`)
+- [x] 1.5 🔨 Ćwiczenie zbiorcze: mini-symulator „serwera" na Streamach
+      (Future=request/response, Stream=push; zapowiedź FakeWinkChatServer)
 
 ## Faza 2 — Inicjalizacja projektu
 
