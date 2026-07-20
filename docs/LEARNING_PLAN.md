@@ -14,14 +14,19 @@ teorii · 🔨 = głównie praktyka · 📝 = ćwiczenie z pisania ADR/dokumenta
 Cel: `flutter doctor` bez żadnych błędów, działający symulator iOS i emulator
 Androida.
 
-- [ ] 0.1 🎓 Jak działa toolchain Fluttera (SDK, kanały, silnik, embeddery
+- [x] 0.1 🎓 Jak działa toolchain Fluttera (SDK, kanały, silnik, embeddery
       iOS/Android) i po co nam FVM
-- [ ] 0.2 🔨 Aktualizacja: Xcode + Command Line Tools, Flutter do najnowszego
+- [x] 0.2 🔨 Aktualizacja: Xcode + Command Line Tools, Flutter do najnowszego
       stable (decyzja: FVM czy globalny SDK → 📝 ADR-002)
-- [ ] 0.3 🔨 Symulator iOS: uruchomienie, podstawy obsługi (lokalizacja
+      → Flutter 3.44.6 przez FVM, Xcode 26.2 + CocoaPods 1.17.0,
+      Android SDK 36.0.0; web świadomie pominięty
+- [x] 0.3 🔨 Symulator iOS: uruchomienie, podstawy obsługi (lokalizacja
       symulowana!), emulator Androida w Android Studio
-- [ ] 0.4 🔨 Konfiguracja edytora (VS Code / Android Studio): pluginy Flutter/
-      Dart, format-on-save, DevTools
+      → iPhone 17 (iOS 26.2) + Pixel 10 Pro (Android 17) wykryte przez
+      `fvm flutter devices`
+- [x] 0.4 🔨 Konfiguracja edytora: pluginy Flutter/Dart, format-on-save,
+      DevTools → edytor: Zed (wtyczki Flutter/Dart/BLoC, format-on-save on).
+      Dopięcie Zeda do SDK z FVM (.fvm/flutter_sdk) → do zrobienia w Fazie 2
 
 ## Faza 1 — Przypomnienie Darta
 
@@ -59,6 +64,9 @@ odpaloną na obu platformach.
       push na GitHub, konfiguracja branch protection
 - [ ] 2.6 🔨 Struktura katalogów wg [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
       (na razie puste katalogi z plikami README/`.gitkeep`)
+- [ ] 2.7 🔨 Przypięcie wersji do projektu: `fvm use 3.44.6` (powstaje
+      `.fvmrc`), `.gitignore` pod FVM (commit `.fvmrc`, ignoruj `.fvm/`),
+      dopięcie edytora Zed do `.fvm/flutter_sdk` (analiza na wersji z FVM)
 
 ## Faza 3 — Podstawy Flutter: UI bez logiki
 
