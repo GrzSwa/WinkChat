@@ -51,23 +51,26 @@ Cel: swoboda w konstrukcjach, na których stoi cały projekt. Formuła: krótkie
 Cel: puste, ale profesjonalnie skonfigurowane repo z aplikacją „szkieletem"
 odpaloną na obu platformach.
 
-- [ ] 2.1 🎓 Anatomia projektu Flutter: co generuje `flutter create`, do czego
+- [x] 2.1 🎓 Anatomia projektu Flutter: co generuje `flutter create`, do czego
       są katalogi `ios/`, `android/`, czym jest `pubspec.yaml`
-- [ ] 2.2 🔨 `flutter create` (org, nazwa pakietu — decyzja świadoma!),
+- [x] 2.2 🔨 `flutter create` (org, nazwa pakietu — decyzja świadoma!),
       pierwsze uruchomienie na iOS i Androidzie
-- [ ] 2.3 🔨 Porządki w repo: poprawny `.gitignore` dla aplikacji Flutter
+      → `--org com.winkchat --project-name winkchat --platforms ios,android`
+- [x] 2.3 🔨 Porządki w repo: poprawny `.gitignore` dla aplikacji Flutter
       (m.in. **commitujemy `pubspec.lock`** — wyjaśnienie: aplikacja vs
       biblioteka), usunięcie śmieci z szablonu
-- [ ] 2.4 🔨 Linter: `very_good_analysis`, zasada „zero warningów",
+- [x] 2.4 🔨 Linter: `very_good_analysis` (^10.3.0), zasada „zero warningów",
       `dart format`
 - [ ] 2.5 🎓 Git: Conventional Commits + branching wg
       [GIT_WORKFLOW.md](GIT_WORKFLOW.md); pierwsze commity wg konwencji,
       push na GitHub, konfiguracja branch protection
-- [ ] 2.6 🔨 Struktura katalogów wg [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
-      (na razie puste katalogi z plikami README/`.gitkeep`)
-- [ ] 2.7 🔨 Przypięcie wersji do projektu: `fvm use 3.44.6` (powstaje
+- [x] 2.6 🎓 Zrozumienie struktury wg [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
+      → **decyzja: nie tworzymy pustych katalogów na zapas** (YAGNI; brak
+      README-wypełniaczy — jedno źródło prawdy o strukturze to
+      PROJECT_STRUCTURE.md). Katalogi powstają wraz z kodem, od Fazy 4
+- [x] 2.7 🔨 Przypięcie wersji do projektu: `fvm use 3.44.6` (powstaje
       `.fvmrc`), `.gitignore` pod FVM (commit `.fvmrc`, ignoruj `.fvm/`),
-      dopięcie edytora Zed do `.fvm/flutter_sdk` (analiza na wersji z FVM)
+      edytor Zed korzysta z FVM przez PATH (`~/fvm/default/bin`)
 
 ## Faza 3 — Podstawy Flutter: UI bez logiki
 

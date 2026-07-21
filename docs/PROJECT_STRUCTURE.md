@@ -57,6 +57,12 @@ winkchat/
 └── .github/workflows/        # CI (patrz CI_CD.md)
 ```
 
+> **Uwaga:** powyższe drzewo to stan **docelowy**, nie stan do odtworzenia od
+> razu. Katalogów nie tworzymy „na zapas" — powstają wtedy, gdy pojawia się
+> w nich realny kod (YAGNI). Nie stosujemy też plików-wypełniaczy
+> (`README.md`/`.gitkeep`) w pustych katalogach: strukturę dokumentuje ten
+> plik i tylko on.
+
 ## 2. Zasady rozmieszczania kodu (nie łamiemy)
 
 1. **Plik należy do feature'a, którego dotyczy.** Do `core/` trafia wyłącznie
