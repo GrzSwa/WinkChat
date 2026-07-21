@@ -61,9 +61,11 @@ odpaloną na obu platformach.
       biblioteka), usunięcie śmieci z szablonu
 - [x] 2.4 🔨 Linter: `very_good_analysis` (^10.3.0), zasada „zero warningów",
       `dart format`
-- [ ] 2.5 🎓 Git: Conventional Commits + branching wg
+- [x] 2.5 🎓 Git: Conventional Commits + branching wg
       [GIT_WORKFLOW.md](GIT_WORKFLOW.md); pierwsze commity wg konwencji,
-      push na GitHub, konfiguracja branch protection
+      push na GitHub → **decyzja: od Fazy 3 pracujemy przez gałęzie i PR-y**
+      (squash-merge = 1 PR to 1 logiczna zmiana); twarde branch protection
+      dopiero w 10.3, razem z wymogiem zielonego CI
 - [x] 2.6 🎓 Zrozumienie struktury wg [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
       → **decyzja: nie tworzymy pustych katalogów na zapas** (YAGNI; brak
       README-wypełniaczy — jedno źródło prawdy o strukturze to
