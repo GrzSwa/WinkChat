@@ -34,6 +34,7 @@ Szczegółowa konfiguracja środowiska: [docs/TOOLS.md](docs/TOOLS.md)
 | [CLEAN_ARCHITECTURE](docs/CLEAN_ARCHITECTURE.md) | Zasady Clean Architecture obowiązujące w projekcie |
 | [PROJECT_STRUCTURE](docs/PROJECT_STRUCTURE.md) | Struktura katalogów i konwencje nazewnictwa |
 | [TECH_STACK](docs/TECH_STACK.md) | Technologie i pakiety — z uzasadnieniem wyborów |
+| [DESIGN_SYSTEM](docs/DESIGN_SYSTEM.md) | Tokeny wizualne: kolory, typografia, odstępy, animacje |
 | [TOOLS](docs/TOOLS.md) | Narzędzia developerskie i setup środowiska |
 | [SERVER_PROTOCOL](docs/SERVER_PROTOCOL.md) | Protokół komunikacji z serwerem (WebSocket) |
 | [ERROR_HANDLING](docs/ERROR_HANDLING.md) | Strategia obsługi błędów |
