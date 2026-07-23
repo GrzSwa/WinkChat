@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:winkchat/app/theme/app_theme.dart';
-import 'package:winkchat/app/theme/app_typography.dart';
+import 'package:winkchat/features/onboarding/presentation/screens/welcome_screen.dart';
 
 /// Application entry point — loads the WinkChat widget tree.
 void main() {
@@ -22,11 +22,7 @@ class WinkChatApp extends StatelessWidget {
     return MaterialApp(
       title: 'WinkChat',
       theme: AppTheme.dark,
-      home: const Scaffold(
-        body: Center(
-          child: Text('WinkChat', style: AppTypography.displayLarge),
-        ),
-      ),
+      home: const WelcomeScreen(),
     );
   }
 }
