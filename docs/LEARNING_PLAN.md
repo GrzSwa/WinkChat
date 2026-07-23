@@ -79,15 +79,15 @@ odpaloną na obu platformach.
 Cel: statyczne makiety głównych ekranów wg projektu z Claude Design;
 swoboda w budowaniu layoutów.
 
-- [ ] 3.1 🎓 Drzewo widgetów, `StatelessWidget` vs `StatefulWidget`,
+- [x] 3.1 🎓 Drzewo widgetów, `StatelessWidget` vs `StatefulWidget`,
       `BuildContext`, cykl życia stanu
-- [ ] 3.2 🎓 Layout: `Row`/`Column`/`Stack`/`Expanded`/`Flexible`,
+- [x] 3.2 🎓 Layout: `Row`/`Column`/`Stack`/`Expanded`/`Flexible`,
       constraints („constraints go down, sizes go up"), overflow
 - [x] 3.3 🔨 Theming: `ThemeData` z tokenów (`lib/app/theme/`), Manrope
       bundlowany, **tylko tryb ciemny**; tokeny jako klasy `static const`
       (nie enum — const-safe, idiom Fluttera). Font/kolory z Claude Design
       → **UWAGA: zrobione przed 3.2 (layout)** — infrastruktura przed rysowaniem
-- [ ] 3.4 🔨 Ekran onboardingu (formularz profilu) — statycznie
+- [x] 3.4 🔨 Ekran onboardingu (formularz profilu) — statycznie
 - [ ] 3.5 🔨 Ekran listy nearby (karta użytkownika, dystans „~") — statycznie,
       na sztucznych danych
 - [ ] 3.6 🔨 Ekran czatu (dymki, pole wiadomości, licznik znaków) — statycznie
@@ -199,8 +199,7 @@ Cel: każdy PR automatycznie zweryfikowany; main zawsze zielony.
 
 - [ ] 10.1 🎓 Wykład: po co CI, anatomia GitHub Actions (workflow, job, step,
       cache) — [CI_CD.md](CI_CD.md)
-- [ ] 10.2 🔨 Workflow PR: format-check → analyze → test → build (Android APK
-      + iOS bez podpisu)
+- [ ] 10.2 🔨 Workflow PR: format-check → analyze → test → build (Android APK + iOS bez podpisu)
 - [ ] 10.3 🔨 Branch protection na `main` (wymagane przejście CI), badge
       w README
 - [ ] 10.4 📝 ADR-004: zakres CI/CD (bez dystrybucji — świadoma decyzja)
