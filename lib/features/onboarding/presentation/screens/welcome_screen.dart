@@ -66,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        'Bez kont • Bez historii • Tylko teraz',
+                        'Bez konta • Bez historii • Tylko teraz',
                         style: AppTypography.labelLarge.copyWith(
                           color: AppColors.textDisabled,
                         ),
