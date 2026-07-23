@@ -38,8 +38,10 @@ abstract class ChatRepository { ... }
   nie implementację.
 - Parametry opisujemy prozą w treści, gdy są nieoczywiste (Dart nie używa
   `@param`).
-- Język dartdoc: **polski** (dokumentacja projektu edukacyjnego); nazwy
-  identyfikatorów pozostają angielskie.
+- Język dartdoc (`///`): **angielski** — standard branżowy, spójny
+  z angielskimi nazwami w kodzie i lepiej wygląda w portfolio.
+  Komentarze wyjaśniające `//` (patrz §3) piszemy natomiast **po polsku** —
+  to warstwa dydaktyczna „dlaczego". Rozmowa i dokumenty `.md`: polski.
 
 ## 3. Komentarze `//` w treści kodu
 

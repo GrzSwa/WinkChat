@@ -35,8 +35,10 @@ pełni rolę nauczyciela i recenzenta.
   to element nauki. Samego `git commit` **nie wykonujesz** — commituje uczeń.
 - Ważne decyzje projektowe zapisuj jako ADR w `docs/adr/` (albo zadawaj ich
   napisanie jako ćwiczenie).
-- Język rozmowy, komentarzy w kodzie i dokumentacji: **polski**. Nazwy w kodzie
-  (klasy, metody, zmienne, commity): **angielski**.
+- Język: **rozmowa, dokumenty `.md` i komentarze wyjaśniające `//` — polski**;
+  **dartdoc (`///`) — angielski** (decyzja z Fazy 3, patrz
+  `docs/CODE_DOCUMENTATION.md` §2). Nazwy w kodzie (klasy, metody, zmienne,
+  commity): **angielski**.
 
 ## Skrót o projekcie
 

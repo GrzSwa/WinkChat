@@ -83,8 +83,10 @@ swoboda w budowaniu layoutów.
       `BuildContext`, cykl życia stanu
 - [ ] 3.2 🎓 Layout: `Row`/`Column`/`Stack`/`Expanded`/`Flexible`,
       constraints („constraints go down, sizes go up"), overflow
-- [ ] 3.3 🔨 Theming: `ThemeData`, Material 3, kolory/typografia z projektu
-      Claude Design, tryb jasny/ciemny
+- [x] 3.3 🔨 Theming: `ThemeData` z tokenów (`lib/app/theme/`), Manrope
+      bundlowany, **tylko tryb ciemny**; tokeny jako klasy `static const`
+      (nie enum — const-safe, idiom Fluttera). Font/kolory z Claude Design
+      → **UWAGA: zrobione przed 3.2 (layout)** — infrastruktura przed rysowaniem
 - [ ] 3.4 🔨 Ekran onboardingu (formularz profilu) — statycznie
 - [ ] 3.5 🔨 Ekran listy nearby (karta użytkownika, dystans „~") — statycznie,
       na sztucznych danych
