@@ -1,36 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:winkchat/app/theme/app_theme.dart';
+import 'package:winkchat/app/theme/app_typography.dart';
 
-/// Punkt wejścia aplikacji — montuje drzewo widgetów WinkChat.
+/// Application entry point — loads the WinkChat widget tree.
 void main() {
-  // runApp bierze widget i czyni go korzeniem całego drzewa UI.
-  // const, bo WinkChatApp nie zależy od żadnych zmiennych danych —
-  // Flutter może taki widget współdzielić/optymalizować (reguła prefer_const).
   runApp(const WinkChatApp());
 }
 
-/// Korzeń aplikacji WinkChat.
+/// The root of the WinkChat app.
 ///
-/// Konfiguruje [MaterialApp] (tytuł, nawigacja, motyw). Na tym etapie
-/// renderuje jedynie ekran-zaślepkę; właściwe ekrany (onboarding, lista
-/// pobliskich, czat) powstaną w kolejnych fazach planu nauki.
+/// Configures [MaterialApp] (title, navigation, theme). At this stage,
+/// it renders only a placeholder screen; the actual screens (onboarding, list
+/// of nearby users, chat) will be created in subsequent phases of the
+/// learning plan.
 class WinkChatApp extends StatelessWidget {
-  /// Tworzy korzeń aplikacji.
+  /// Creates the application root.
   const WinkChatApp({super.key});
 
-  // build() opisuje, jak wygląda ten fragment UI. Wywoływany przez Flutter,
-  // gdy trzeba narysować/odświeżyć widget. To serce każdego widgetu.
   @override
   Widget build(BuildContext context) {
-    // MaterialApp to "rama" aplikacji w stylu Material Design: zapewnia
-    // nawigację, motyw, lokalizację itp. W Flutter 3.44 Material 3 jest
-    // domyślny, więc nie musimy nic konfigurować, by mieć nowoczesny wygląd.
-    return const MaterialApp(
+    return MaterialApp(
       title: 'WinkChat',
-      // Scaffold to podstawowy "szkielet" ekranu (miejsce na app bar, body,
-      // przyciski). Na razie samo wyśrodkowane logo tekstowe.
-      home: Scaffold(
+      theme: AppTheme.dark,
+      home: const Scaffold(
         body: Center(
-          child: Text('WinkChat'),
+          child: Text('WinkChat', style: AppTypography.displayLarge),
         ),
       ),
     );
